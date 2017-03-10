@@ -1,0 +1,79 @@
+html {
+	height: 100%;
+	background-color: beige;
+}
+
+#application {
+	background-color: beige;
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#brand-name {
+    font-family: 'Pacifico', cursive;
+    font-size: 21pt;
+    color: whitesmoke;
+}
+
+#brand-name:hover {
+    color: #9d9d9d;
+    cursor: pointer;
+}
+
+.note {
+	background-color: coral;
+	margin-top: 1%;
+	margin-left: 1%;
+	padding: 1.5%;
+	padding-bottom: 0.5%;
+	max-width: 23.75%;
+}
+
+#note-buttons {
+	display: flex;
+}
+
+.btn {
+	margin: auto;
+}
+
+.btn:hover {
+	text-decoration: none;
+}
+
+.note-btn {
+	margin-left: 10px;
+}
+
+.note-btn:hover {
+	color: black;
+}
+
+h2 {
+	margin: 0;
+}
+
+p {
+	margin-top: 15px;
+}
+
+.note-title {
+	color: whitesmoke;
+}
+
+.note-body {
+	color: black;
+}
+
+.btn-link {
+	color: whitesmoke;
+}
+
+.btn-link:hover {
+	color: black;
+}
+
+.note-title, .note-body {
+	width: 100%;
+}

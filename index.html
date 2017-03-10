@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ToDo-List</title>
+        <meta content="utf-8">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- Latest AngularJS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+        <!-- External CSS -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- External Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="brand-name" class="navbar-brand" href="#">tasks.</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Title">
+                            <input type="text" class="form-control" placeholder="Description">
+                        </div>
+                        <button type="submit" class="btn btn-link"><span class="glyphicon glyphicon-plus"></span></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div id="application" ng-app="">
+            <section class="note">
+                <h2 class="note-title">My First Note</h2>
+                <p class="note-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed consequat sagittis velit in egestas. Nam fermentum
+                    rhoncus dolor, in venenatis ante consectetur ultrices. Sed
+                    lobortis tellus et sem volutpat eleifend. Sed iaculis
+                    bibendum nibh at pretium. Aliquam sit amet tortor non
+                    neque tempor vulputate.
+                </p>
+                <section id="note-buttons">
+                    <button type="submit" class="btn btn-link" onclick="checkTask()"><span class="glyphicon glyphicon-ok"></span><span class="note-btn">Done</span></button>
+                    <button type="submit" class="btn btn-link"><span class="glyphicon glyphicon-remove"></span><span class="note-btn">Remove</span></button>
+                </section>
+            </section>
+        </div>
+        <script src="tasks.json"></script>
+        <script src="todo.js"></script>
+    </body>
+</html>
