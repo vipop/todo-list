@@ -3,11 +3,28 @@ html {
 	background-color: beige;
 }
 
-#application {
+body {
 	background-color: beige;
-	margin-top: 50px;
+	padding-top: 50px;
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
+}
+
+#upload {
+	width: 100%;
+	text-align: center;
+	font-size: 21pt;
+	color: gray;
+	font-family: 'Pacifico', cursive;
+}
+
+#notes {
+	background-color: beige;
+	padding-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
 }
 
 #brand-name {
@@ -28,6 +45,7 @@ html {
 	padding: 1.5%;
 	padding-bottom: 0.5%;
 	max-width: 23.75%;
+	min-width: 200px;
 }
 
 #note-buttons {

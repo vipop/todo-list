@@ -1,9 +1,24 @@
 {
 	"todo":[
 			{
-				"task": "titleoftask",
+				"task": "Task 1",
 				"complete": "false",
-				"description": "description of the task"
+				"description": "This is my first task."
+			},
+			{
+				"task": "Task 2",
+				"complete": "false",
+				"description": "This is my second task."
+			},
+			{
+				"task": "Task 3",
+				"complete": "false",
+				"description": "This is my third task."
+			},
+			{
+				"task": "Task 4",
+				"complete": "false",
+				"description": "This is my fourth task."
 			}
 		]
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="notes">
     <head>
         <title>ToDo-List</title>
         <meta content="utf-8">
@@ -20,8 +20,11 @@
 
         <!-- External Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+        <script src="notes.js"></script>
+
     </head>
-    <body>
+    <body id="notes" style="height: 100%" ng-controller="notesController">
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
@@ -35,34 +38,20 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="myNavbar">
-                    <form class="navbar-form navbar-left">
+                    <section class="navbar-form navbar-left">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Title">
                             <input type="text" class="form-control" placeholder="Description">
                         </div>
-                        <button type="submit" class="btn btn-link"><span class="glyphicon glyphicon-plus"></span></button>
-                    </form>
+                        <button class="btn btn-link" ng-click="addNote()"><span class="glyphicon glyphicon-plus"></span></button>
+                    </section>
                 </div>
             </div>
         </nav>
-        <div id="application" ng-app="">
-            <section class="note">
-                <h2 class="note-title">My First Note</h2>
-                <p class="note-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed consequat sagittis velit in egestas. Nam fermentum
-                    rhoncus dolor, in venenatis ante consectetur ultrices. Sed
-                    lobortis tellus et sem volutpat eleifend. Sed iaculis
-                    bibendum nibh at pretium. Aliquam sit amet tortor non
-                    neque tempor vulputate.
-                </p>
-                <section id="note-buttons">
-                    <button type="submit" class="btn btn-link" onclick="checkTask()"><span class="glyphicon glyphicon-ok"></span><span class="note-btn">Done</span></button>
-                    <button type="submit" class="btn btn-link"><span class="glyphicon glyphicon-remove"></span><span class="note-btn">Remove</span></button>
-                </section>
-            </section>
+        <div id="upload">
+            <span class="glyphicon glyphicon-upload" style="font-size: 56pt; margin-bottom: 10px;"></span><br />Drag and drop your notes here.
         </div>
-        <script src="tasks.json"></script>
+        <div ng-include="'note.html'" class="note" ng-repeat="todo in todos"></div>
         <script src="todo.js"></script>
     </body>
 </html>

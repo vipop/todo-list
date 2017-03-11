@@ -1,15 +1,15 @@
-var tasks = "";
+var data = "";
 
 window.onload = function() {
-	var file = 'tasks.json';
-	var r = new FileReader();
-	r.onload = receivedFile();
-	r.readAsText(file);
-
-	console.log(tasks.todo[0].task);
+	//console.log(tasks.todo[0].task);
+	document.getElementsByTagName("body")[0].style.display = "flex";
+	document.getElementsByTagName("body")[0].style["align-items"] = "center";
 }
 
-function receivedFile() {
-	var text = e.target.result;
-	tasks = JSON.parse();
+function addNote() {
+	var notes = document.getElementById("notes");
+	var newNote = document.createElement("div");
+	newNote.setAttribute("ng-include","'note.html'");
+	newNote.setAttribute("class","note");
+	notes.appendChild(newNote);
 }
