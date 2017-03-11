@@ -11,6 +11,10 @@ body {
 	width: 100%;
 }
 
+a {
+	outline: none;
+}
+
 #upload {
 	width: 100%;
 	text-align: center;
@@ -56,8 +60,10 @@ body {
 	margin: auto;
 }
 
-.btn:hover {
-	text-decoration: none;
+.btn:hover, .btn:active, .btn-link:active, .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+	outline: none;
+    color: whitesmoke;
+    text-decoration: none;
 }
 
 .note-btn {

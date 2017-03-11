@@ -1,8 +1,8 @@
-<h2 class="note-title">{{todo.task}}</h2>
+<h3 class="note-title">{{todo.task}}</h3>
 <p class="note-body">
 	{{todo.description}}
 </p>
 <section id="note-buttons">
-	<button type="submit" class="btn btn-link" onclick="checkTask()"><span class="glyphicon glyphicon-ok"></span><span class="note-btn">Done</span></button>
-	<button type="submit" class="btn btn-link" ng-click="removeNote(this)"><span class="glyphicon glyphicon-remove"></span><span class="note-btn">Remove</span></button>
+	<button type="submit" class="btn btn-link" ng-click="checkNote($event)"><span class="glyphicon glyphicon-ok"></span><span class="note-btn">Done</span></button>
+	<button type="submit" class="btn btn-link" ng-click="removeNote($event)"><span class="glyphicon glyphicon-remove"></span><span class="note-btn">Remove</span></button>
 </section>

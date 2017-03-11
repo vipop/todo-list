@@ -40,8 +40,8 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <section class="navbar-form navbar-left">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Title">
-                            <input type="text" class="form-control" placeholder="Description">
+                            <input id="title" type="text" class="form-control" placeholder="Title">
+                            <input id="description" type="text" class="form-control" placeholder="Description">
                         </div>
                         <button class="btn btn-link" ng-click="addNote()"><span class="glyphicon glyphicon-plus"></span></button>
                     </section>
@@ -51,7 +51,7 @@
         <div id="upload">
             <span class="glyphicon glyphicon-upload" style="font-size: 56pt; margin-bottom: 10px;"></span><br />Drag and drop your notes here.
         </div>
-        <div ng-include="'note.html'" class="note" ng-repeat="todo in todos"></div>
+        <div ng-include="'note.html'" class="note" ng-repeat="todo in todos | customFilter"></div>
         <script src="todo.js"></script>
     </body>
 </html>
