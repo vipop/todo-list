@@ -1,0 +1,8 @@
+<h3 class="note-title">{{complete.task}}</h3>
+<p class="note-body">
+	{{complete.description}}
+</p>
+<section id="note-buttons">
+	<button type="submit" class="btn btn-link" ng-click="checkNote($event)"><span class="glyphicon glyphicon-ok"></span><span class="note-btn">Done</span></button>
+	<button type="submit" class="btn btn-link" ng-click="removeNote($event)"><span class="glyphicon glyphicon-remove"></span><span class="note-btn">Remove</span></button>
+</section>

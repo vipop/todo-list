@@ -51,7 +51,10 @@
         <div id="upload">
             <span class="glyphicon glyphicon-upload" style="font-size: 56pt; margin-bottom: 10px;"></span><br />Drag and drop your notes here.
         </div>
-        <div ng-include="'note.html'" class="note" ng-repeat="todo in todos | customFilter"></div>
+        <h2 style="width: 100%">To Do</h2>
+        <div ng-include="'todo.html'" class="note" ng-repeat="todo in todos | customFilter:completes"></div>
+        <h2 style="width: 100%">Complete</h2>
+        <div ng-include="'complete.html'" style="background-color: darkseagreen" class="note" ng-repeat="complete in completes | customFilter:completes"></div>
         <script src="todo.js"></script>
     </body>
 </html>

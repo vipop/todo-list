@@ -17,7 +17,7 @@
 			},
 			{
 				"task": "Task 4",
-				"complete": "false",
+				"complete": "true",
 				"description": "This is my fourth task."
 			},
 			{
