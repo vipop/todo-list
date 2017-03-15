@@ -2,6 +2,7 @@
 <html ng-app="notes">
     <head>
         <title>ToDo-List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="utf-8">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,8 +22,6 @@
         <!-- External Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-        <script src="notes.js"></script>
-
     </head>
     <body id="notes" style="height: 100%" ng-controller="notesController">
         <!-- Navigation -->
@@ -38,23 +37,33 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="myNavbar">
-                    <section class="navbar-form navbar-left">
+                    <section class="navbar-form">
                         <div class="form-group">
-                            <input id="title" type="text" class="form-control" placeholder="Title">
-                            <input id="description" type="text" class="form-control" placeholder="Description">
+                            <input id="title" type="text" class="form-control" placeholder="Title" onchange="angular.element(this).scope().clearError()">
+                            <input id="description" type="text" class="form-control" placeholder="Description" onchange="angular.element(this).scope().clearError()">
                         </div>
                         <button class="btn btn-link" ng-click="addNote()"><span class="glyphicon glyphicon-plus"></span></button>
+                        <span id="error" style="background-color: #222222; color: whitesmoke;"></span>
                     </section>
                 </div>
             </div>
         </nav>
         <div id="upload">
-            <span class="glyphicon glyphicon-upload" style="font-size: 56pt; margin-bottom: 10px;"></span><br />Drag and drop your notes here.
+            <span class="glyphicon glyphicon-cloud-upload" style="font-size: 62pt; margin-bottom: 15px;"></span>
+            <br />
+            <span>
+                upload your existing notes.
+            </span>
+            <br /><br />
+            <label id="upload-button" class="btn btn-default" for="file-selector" ng-click="init()">
+                <input id="file-selector" type="file" style="display:none;" onchange="angular.element(this).scope().upload(this)">browse
+            </label>
         </div>
-        <h2 style="width: 100%">To Do</h2>
+        <h2 id="todo" style="width: 100%">to do</h2>
         <div ng-include="'todo.html'" class="note" ng-repeat="todo in todos | customFilter:completes"></div>
-        <h2 style="width: 100%">Complete</h2>
+        <h2 id="complete" style="width: 100%"><br />complete</h2>
         <div ng-include="'complete.html'" style="background-color: darkseagreen" class="note" ng-repeat="complete in completes | customFilter:completes"></div>
         <script src="todo.js"></script>
+        <script src="notes.js"></script>
     </body>
 </html>

@@ -15,13 +15,43 @@ a {
 	outline: none;
 }
 
+h2 {
+	margin: 20px;
+	font-family: 'Pacifico', cursive;
+}
+
+.form-group {
+	width: 53%;
+}
+
+#title {
+	width: 28%;
+}
+
+#description {
+	width: 70%;
+}
+
 #upload {
 	width: 100%;
 	text-align: center;
 	font-size: 21pt;
-	color: gray;
+	color: #333333;
 	font-family: 'Pacifico', cursive;
 }
+
+#upload-button {
+	background-color: #333333;
+	color: whitesmoke;
+	border: none;
+	font-size: 16pt;
+	padding: 10px 60px 10px 60px;
+}
+
+#upload-button:hover {
+	color: beige;
+}
+
 
 #notes {
 	background-color: beige;
@@ -72,10 +102,6 @@ a {
 
 .note-btn:hover {
 	color: black;
-}
-
-h2 {
-	margin: 0;
 }
 
 p {
